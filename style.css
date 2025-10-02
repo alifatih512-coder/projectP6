@@ -1,4 +1,4 @@
-/* File: style.css (Versi "Darker Shade of O") */
+/* File: style.css (Versi Final "Darker Shade of O" dengan Menu) */
 
 /* Komentar: Mendefinisikan variabel global dengan palet warna baru yang terinspirasi dari parfum. */
 :root {
@@ -19,21 +19,26 @@
     box-sizing: border-box;
 }
 
+/* ================= PERUBAHAN PENTING DI SINI ================= */
+/* Komentar: Mengaktifkan scroll yang mulus saat link menu di-klik. */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Komentar: Mengatur latar body dengan nuansa merah gelap dan gradien halus untuk memberi tekstur. */
 body {
     font-family: var(--font-sans);
     background-color: var(--bg-dark-ruby);
-    /* Menambahkan gradien halus untuk meniru efek cahaya pada latar foto */
     background-image: radial-gradient(circle at 80% 20%, rgba(150, 20, 20, 0.2), transparent 70%);
     color: var(--text-light);
     line-height: 1.7;
-    padding: 20px;
+    /* Menghapus padding agar menu bisa menempel sempurna di tepi atas */
 }
 
-/* Komentar: Mengatur gaya header dengan warna emas yang baru. */
+/* Komentar: Mengatur gaya header. Padding atas dikurangi karena sudah ada menu. */
 header {
     text-align: center;
-    padding: 40px 20px;
+    padding: 20px 20px 40px 20px;
 }
 
 header h1 {
@@ -44,7 +49,6 @@ header h1 {
     opacity: 0.9;
 }
 
-/* Komentar: Gaya khusus untuk nama Anda, kini menggunakan warna emas yang baru. */
 header h1 span {
     font-size: 4rem;
     color: var(--accent-gold);
@@ -58,7 +62,7 @@ header .subtitle {
     margin-top: 10px;
 }
 
-/* Komentar: Kontainer utama kini menggunakan latar belakang merah yang sedikit lebih terang. */
+/* Komentar: Kontainer utama, tidak ada perubahan di sini. */
 main {
     max-width: 800px;
     margin: 0 auto;
@@ -66,10 +70,10 @@ main {
     border-radius: 25px;
     padding: 15px 30px 30px 30px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    border: 1px solid rgba(42, 10, 10, 0.8); /* Border halus untuk mempertegas kontainer */
+    border: 1px solid rgba(42, 10, 10, 0.8);
 }
 
-/* Komentar: Style section tetap sama, hanya warna border pemisah yang berubah. */
+/* Komentar: Style section tidak berubah. */
 section {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -87,7 +91,7 @@ section h2 {
     text-align: center;
 }
 
-/* Komentar: Gaya untuk elemen media (gambar, video, audio). */
+/* Komentar: Gaya untuk elemen media tidak berubah. */
 img, video {
     max-width: 100%;
     height: auto;
@@ -96,7 +100,7 @@ img, video {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid var(--border-color); /* Menambah border emas halus */
+    border: 2px solid var(--border-color);
 }
 
 audio {
@@ -104,7 +108,7 @@ audio {
     margin-top: 15px;
 }
 
-/* Komentar: Gaya untuk Tabel, disesuaikan dengan palet warna baru. */
+/* Komentar: Gaya untuk Tabel tidak berubah. */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -123,7 +127,7 @@ thead th {
     font-size: 1.1rem;
 }
 
-/* Komentar: Gaya untuk Daftar List. */
+/* Komentar: Gaya untuk Daftar List tidak berubah. */
 ol {
     padding-left: 25px;
 }
@@ -132,7 +136,7 @@ ol li {
     margin-bottom: 8px;
 }
 
-/* Komentar: Gaya untuk Form, disesuaikan dengan warna merah dan emas. */
+/* Komentar: Gaya untuk Form tidak berubah. */
 form {
     margin-top: 20px;
 }
@@ -161,7 +165,6 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
     box-shadow: 0 0 10px rgba(200, 168, 73, 0.3);
 }
 
-/* Komentar: Gaya untuk tombol submit, kini berwarna emas mewah. */
 input[type="submit"] {
     background-color: var(--accent-gold);
     color: var(--text-dark);
@@ -177,13 +180,60 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #dcb85f; /* Warna emas sedikit lebih terang saat disentuh */
+    background-color: #dcb85f;
 }
 
-/* Komentar: Gaya untuk footer. */
+/* Komentar: Gaya untuk footer tidak berubah. */
 footer {
     text-align: center;
     padding: 40px 20px;
     color: var(--text-light);
     opacity: 0.6;
+}
+
+/* ========================================================== */
+/* == BAGIAN BARU: KODE CSS UNTUK MENU NAVIGASI DITAMBAHKAN == */
+/* ========================================================== */
+
+/* Komentar: Gaya untuk kontainer menu <nav>.
+   'position: sticky' membuatnya menempel di atas. 'top: 0' menempatkannya di paling atas.
+   'z-index: 1000' memastikan menu selalu di atas konten lain. */
+.menu-nav {
+    position: sticky;
+    top: 0;
+    background-color: rgba(42, 10, 10, 0.8); /* Warna merah gelap semi-transparan dari tema */
+    backdrop-filter: blur(10px); /* Efek blur pada latar di belakang menu */
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    width: 100%; /* Memastikan menu membentang selebar layar */
+}
+
+/* Komentar: Gaya untuk daftar <ul> di dalam menu.
+   'display: flex' membuat item menu berbaris horizontal.
+   'justify-content: center' menempatkan item di tengah. */
+.menu-nav ul {
+    list-style: none; /* Menghilangkan simbol bullet point */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Agar menu bisa turun baris jika tidak cukup di layar kecil */
+}
+
+/* Komentar: Gaya untuk setiap link <a> di dalam menu. */
+.menu-nav a {
+    color: var(--text-light);
+    text-decoration: none; /* Menghilangkan garis bawah */
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Komentar: Gaya saat kursor mouse berada di atas link (:hover).
+   Warna latar dan teks berubah menjadi warna emas. */
+.menu-nav a:hover {
+    background-color: var(--accent-gold);
+    color: var(--text-dark);
 }
