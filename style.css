@@ -1,0 +1,189 @@
+/* File: style.css (Versi "Darker Shade of O") */
+
+/* Komentar: Mendefinisikan variabel global dengan palet warna baru yang terinspirasi dari parfum. */
+:root {
+    --bg-dark-ruby: #2a0a0a; /* Merah marun yang sangat gelap, seperti latar belakang foto */
+    --content-bg: #3d0c0c;   /* Warna kontainer utama, sedikit lebih terang */
+    --accent-gold: #c8a849;   /* Warna emas mewah dari tulisan dan tutup botol */
+    --text-light: #edeae3;    /* Putih gading agar tidak terlalu kontras dan lebih elegan */
+    --text-dark: #2a0a0a;
+    --border-color: rgba(200, 168, 73, 0.2); /* Warna border emas yang transparan */
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Lato', sans-serif;
+}
+
+/* Komentar: Mengatur ulang style dasar. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Komentar: Mengatur latar body dengan nuansa merah gelap dan gradien halus untuk memberi tekstur. */
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-dark-ruby);
+    /* Menambahkan gradien halus untuk meniru efek cahaya pada latar foto */
+    background-image: radial-gradient(circle at 80% 20%, rgba(150, 20, 20, 0.2), transparent 70%);
+    color: var(--text-light);
+    line-height: 1.7;
+    padding: 20px;
+}
+
+/* Komentar: Mengatur gaya header dengan warna emas yang baru. */
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: var(--text-light);
+    opacity: 0.9;
+}
+
+/* Komentar: Gaya khusus untuk nama Anda, kini menggunakan warna emas yang baru. */
+header h1 span {
+    font-size: 4rem;
+    color: var(--accent-gold);
+    display: block;
+}
+
+header .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+/* Komentar: Kontainer utama kini menggunakan latar belakang merah yang sedikit lebih terang. */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--content-bg);
+    border-radius: 25px;
+    padding: 15px 30px 30px 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    border: 1px solid rgba(42, 10, 10, 0.8); /* Border halus untuk mempertegas kontainer */
+}
+
+/* Komentar: Style section tetap sama, hanya warna border pemisah yang berubah. */
+section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+section:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+section h2 {
+    font-family: var(--font-serif);
+    color: var(--accent-gold);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Komentar: Gaya untuk elemen media (gambar, video, audio). */
+img, video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid var(--border-color); /* Menambah border emas halus */
+}
+
+audio {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Komentar: Gaya untuk Tabel, disesuaikan dengan palet warna baru. */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+thead th {
+    font-family: var(--font-serif);
+    color: var(--accent-gold);
+    font-size: 1.1rem;
+}
+
+/* Komentar: Gaya untuk Daftar List. */
+ol {
+    padding-left: 25px;
+}
+
+ol li {
+    margin-bottom: 8px;
+}
+
+/* Komentar: Gaya untuk Form, disesuaikan dengan warna merah dan emas. */
+form {
+    margin-top: 20px;
+}
+
+label {
+    font-weight: 700;
+    color: var(--text-light);
+    opacity: 0.9;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    background-color: var(--bg-dark-ruby);
+    border: 1px solid var(--content-bg);
+    border-radius: 5px;
+    color: var(--text-light);
+    font-family: var(--font-sans);
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    outline: none;
+    border: 1px solid var(--accent-gold);
+    box-shadow: 0 0 10px rgba(200, 168, 73, 0.3);
+}
+
+/* Komentar: Gaya untuk tombol submit, kini berwarna emas mewah. */
+input[type="submit"] {
+    background-color: var(--accent-gold);
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #dcb85f; /* Warna emas sedikit lebih terang saat disentuh */
+}
+
+/* Komentar: Gaya untuk footer. */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-light);
+    opacity: 0.6;
+}

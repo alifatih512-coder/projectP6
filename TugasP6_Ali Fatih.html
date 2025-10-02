@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scent Portfolio - Ali Fatih</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Scent Portfolio by AFS</h1>
+        <p class="subtitle">Koleksi personal dan review seputar dunia wewangian.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>My Signature Scent</h2>
+            <p>Inilah esensi pilihan saya: Sebuah symphony aroma, yang dipadukan notes spicy and woody sehingga memberikan kesan elegan dan misterius.</p>
+            <img src="hmns.webp">
+        </section>
+
+        <section>
+            <h2>Video Review</h2>
+            <p>Sebuah review singkat tentang parfum di atas.</p>
+            <video src="review.mp4" controls></video>
+        </section>
+
+        <section>
+            <h2>Podcast Aroma</h2>
+            <p>Dengarkan review audio singkat tentang notes yang ada di dalam parfum ini.</p>
+            <audio src="reviewA.mp3" controls></audio>
+        </section>
+
+        <section>
+            <h2>Detail Parfume</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Informasi</th>
+                        <th>Detail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nama Parfum</td>
+                        <td>Darker Shade Of Orgasm</td>
+                    </tr>
+                    <tr>
+                        <td>Brand</td>
+                        <td>Hmns</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section>
+            <h2>Notes The Parfume</h2>
+            <ol>
+                <li>Top Notes: Orange Blossom, Apple, and Pepper</li>
+                <li>Middle Notes: Cypriol, Caramel, and Patchouli</li>
+                <li>Base Notes: Vanilla Beans, Cedarwood, Amber, and Vetiver</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Discuss</h2>
+            <p>Let's Talk Scents: What's Your Signature Scent? Break It Down For Me! </p>
+            
+            <form action="https://formspree.io/f/mpwyrrza" method ="POST">
+                <label for="nama">Nama Anda:</label><br>
+                <input type="text" id="nama" name="nama" placeholder="Nama Anda di Sini"><br><br>
+
+                <label for="email">Email Anda:</label><br>
+                <input type="email" id="email" name="email" placeholder="Masukkan email Anda"><br><br>
+
+                <label for="pesan">Pesan Anda:</label><br>
+                <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis pesan..."></textarea><br><br>
+
+                <input type="submit" value="Kirim Pesan">
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Portfolio Project by AFS &copy; 2025</p>
+    </footer>
+
+</body>
+</html>
